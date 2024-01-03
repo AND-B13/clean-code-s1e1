@@ -7,57 +7,66 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:300,400,700" type="text/css">
     <link rel="stylesheet" href="./style.css">
   </head>
-  <body>
-    <div class="aaa">
-      <img src="./eisenhower-matrix.jpg">
-      <a class="more_inf" href="https://goal-life.com/page/method/matrix-eisenhower">Want more details?</a>
+  <body class="page">
+    <div class="hero">
+      <img class="hero__image" src="./eisenhower-matrix.jpg">
+      <a class="hero__link" href="https://goal-life.com/page/method/matrix-eisenhower" target="_blank">Want more details?</a>
     </div>
-    <div class="centered-main-page-element">
-      <p id="topSectionForAddingElementToList">
-        <label for="new-task">Add Item</label>
-        <div class="task-row-wrapper">
+    <div class="todo-app">
+      <p class="todo-app__descr" id="addTask">
+        <label class="todo-app__label todo-app__label--new" for="newTask">Add Item</label>
+        <div class="todo-app__wrapper">
           <input
-          id="new-task"
-          class="task"
+          id="newTask"
+          class="todo-app__task todo-app__task--new input-reset"
           type="text"
           >
-          <button>Add</button>
+          <button class="todo-app__add-btn btn-reset">Add</button>
         </div>
       </p>
-      <h3>Todo</h3>
-      <ul id="incompleteTasks">
-        <li>
-          <input type="checkbox">
-          <label class="task">Pay Bills</label>
-          <input type="text" class="task">
-          <button class="edit">Edit</button>
-          <button class="delete">
-            <img src="./remove.svg">
+      <h3 class="todo-app__title">Todo</h3>
+      <ul class="todo-app__list list-reset" id="incompleteTasks">
+        <li class="todo-app__item">
+          <input
+          class="todo-app__checkbox input-reset"
+          type="checkbox"
+          >
+          <label class="todo-app__label">Pay Bills</label>
+          <input
+          class="todo-app__task input-reset"
+          type="text"
+          >
+          <button class="todo-app__edit-btn btn-reset">Edit</button>
+          <button class="todo-app__delete-btn btn-reset">
+            <img class="todo-app__icon" src="./remove.svg">
           </button>
         </li>
-        <li class="editMode">
-          <input type="checkbox">
-          <label class="task">Go Shopping</label>
+        <li class="todo-app__item todo-app__item--edit">
+          <input class="todo-app__checkbox input-reset" type="checkbox">
+          <label class="todo-app__label">Go Shopping</label>
           <input
           type="text"
           value="Go Shopping"
-          class="task"
+          class="todo-app__task input-reset"
           >
-          <button class="edit">Save</button>
-          <button class="delete">
-            <img src="./remove.svg">
+          <button class="todo-app__edit-btn btn-reset">Save</button>
+          <button class="todo-app__delete-btn btn-reset">
+            <img class="todo-app__icon" src="./remove.svg">
           </button>
         </li>
       </ul>
-      <h3>Completed</h3>
-      <ul id="completed-tasks">
-        <li>
-          <input type="checkbox" checked>
-          <label class="task">See the Doctor</label>
-          <input type="text" class="task">
-          <button class="edit">Edit</button>
-          <button class="delete">
-            <img src="./remove.svg">
+      <h3 class="todo-app__title">Completed</h3>
+      <ul class="todo-app__list todo-app__list--complete list-reset" id="completedTasks">
+        <li class="todo-app__item">
+          <input class="todo-app__checkbox input-reset" type="checkbox" checked>
+          <label class="todo-app__label">See the Doctor</label>
+          <input
+          class="todo-app__task input-reset"
+          type="text"
+          >
+          <button class="todo-app__edit-btn btn-reset">Edit</button>
+          <button class="todo-app__delete-btn btn-reset">
+            <img class="todo-app__icon" src="./remove.svg">
           </button>
         </li>
       </ul>
