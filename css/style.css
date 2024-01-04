@@ -1,0 +1,176 @@
+/* Basic Style */
+.page {
+  font-family: "Lato", sans-serif;
+  color: #333;
+  background-color: #f8f8f8;
+}
+
+.visually-hidden {
+  position: absolute;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  width: 1px;
+  height: 1px;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.list-reset {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.input-reset,
+.btn-reset {
+  outline: none;
+}
+
+.btn-reset {
+  width: 60px;
+  border: 0;
+  font-size: 15px;
+  color: #888;
+  background: none;
+  cursor: pointer;
+}
+
+.btn-reset:hover {
+  color: #3a3a3a;
+}
+
+.hero {
+  display: block;
+  margin: 0 auto;
+  width: 500px;
+  text-align: right;
+}
+
+.hero__image {
+  width: 100%;
+}
+
+.hero__link {
+  font-family: fantasy, cursive;
+  outline: none;
+}
+
+@media (max-width:768px) {
+  .hero {
+    text-align: center;
+  }
+}
+
+.todo-app {
+  display: block;
+  margin: 0 auto 0;
+  width: 500px;
+}
+
+.todo-app__content-wrapper {
+  display: flex;
+}
+
+.todo-app__label,
+.todo-app__task  {
+  display: inline-block;
+  flex-grow: 1;
+  width: 56%;
+}
+
+/* Heading */
+
+.todo-app__title {
+  display: block;
+  margin: 0;
+  padding: 30px 0 10px;
+  width: 100%;
+  border-bottom: 2px solid #333;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 15px;
+  color: #333;
+}
+
+.todo-app__task {
+  margin: 0;
+  padding: 0 9px;
+  height: 21px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-family: "Lato", sans-serif;
+  font-size: 18px;
+  line-height: 18px;
+  color: #888;
+  background: #fff;
+}
+
+.todo-app__task:focus {
+  color: #333;
+}
+
+/* New Task */
+.todo-app__title--new {
+  display: block;
+  margin: 0 0 20px;
+}
+
+.todo-app__task--new {
+  width: 318px;
+}
+
+/* Task list */
+.todo-app__item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0;
+  border-bottom: 1px solid #eee;
+  overflow: hidden;
+}
+
+.todo-app__checkbox {
+  margin: 0 10px;
+}
+
+.todo-app__label {
+  box-sizing: border-box;
+  padding-left: 10px;
+  width: 226px;
+  font-size: 18px;
+}
+
+.todo-app__task {
+  width: 226px;
+}
+
+.todo-app__icon {
+  height: 2em;
+  transform: rotateZ(45deg);
+  transition: transform .2s ease-in;
+}
+
+.todo-app__icon:hover {
+  transform: rotateZ(0);
+}
+
+/* Completed */
+.todo-app__list--complete .todo-app__label {
+  text-decoration: line-through;
+  color: #888;
+}
+
+/* Edit Task */
+.todo-app__item .todo-app__task {
+  display: none;
+}
+
+.todo-app__item--edit .todo-app__label {
+  display: none;
+}
+
+.todo-app__item--edit .todo-app__task {
+  display: inline-block;
+  width: 224px;
+}
