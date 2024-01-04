@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-  <html lang="en">
+<html lang="en">
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,69 +8,109 @@
     <link rel="stylesheet" href="./style.css">
   </head>
   <body class="page">
-    <div class="hero">
-      <img class="hero__image" src="./eisenhower-matrix.jpg">
-      <a class="hero__link" href="https://goal-life.com/page/method/matrix-eisenhower" target="_blank">Want more details?</a>
-    </div>
-    <div class="todo-app">
-      <p class="todo-app__descr" id="addTask">
-        <label class="todo-app__label todo-app__label--new" for="newTask">Add Item</label>
-        <div class="todo-app__wrapper">
-          <input
-          id="newTask"
-          class="todo-app__task todo-app__task--new input-reset"
-          type="text"
-          >
-          <button class="todo-app__add-btn btn-reset">Add</button>
+    <main>
+      <section class="hero">
+        <h1 class="visually-hidden">Todo App</h1>
+        <img
+        class="hero__image"
+        src="./eisenhower-matrix.jpg"
+        alt="Eisenhower Matrix image"
+        >
+        <a
+        class="hero__link"
+        href="https://goal-life.com/page/method/matrix-eisenhower"
+        aria-label="link more Eisenhower Matrix"
+        target="_blank"
+        >
+        Want more details?
+        </a>
+      </section>
+      <section class="todo-app">
+        <div class="todo-app__wrapper" id="addTask">
+          <h2 class="todo-app__title todo-app__title--new">Add Item</h2>
+          <div class="todo-app__content-wrapper">
+            <input
+            id="newTask"
+            class="todo-app__task todo-app__task--new input-reset"
+            type="text"
+            aria-label="enter a task"
+            >
+            <button class="todo-app__add-btn btn-reset" aria-label="add new task">Add</button>
+          </div>
         </div>
-      </p>
-      <h3 class="todo-app__title">Todo</h3>
-      <ul class="todo-app__list list-reset" id="incompleteTasks">
-        <li class="todo-app__item">
-          <input
-          class="todo-app__checkbox input-reset"
-          type="checkbox"
-          >
-          <label class="todo-app__label">Pay Bills</label>
-          <input
-          class="todo-app__task input-reset"
-          type="text"
-          >
-          <button class="todo-app__edit-btn btn-reset">Edit</button>
-          <button class="todo-app__delete-btn btn-reset">
-            <img class="todo-app__icon" src="./remove.svg">
-          </button>
-        </li>
-        <li class="todo-app__item todo-app__item--edit">
-          <input class="todo-app__checkbox input-reset" type="checkbox">
-          <label class="todo-app__label">Go Shopping</label>
-          <input
-          type="text"
-          value="Go Shopping"
-          class="todo-app__task input-reset"
-          >
-          <button class="todo-app__edit-btn btn-reset">Save</button>
-          <button class="todo-app__delete-btn btn-reset">
-            <img class="todo-app__icon" src="./remove.svg">
-          </button>
-        </li>
-      </ul>
-      <h3 class="todo-app__title">Completed</h3>
-      <ul class="todo-app__list todo-app__list--complete list-reset" id="completedTasks">
-        <li class="todo-app__item">
-          <input class="todo-app__checkbox input-reset" type="checkbox" checked>
-          <label class="todo-app__label">See the Doctor</label>
-          <input
-          class="todo-app__task input-reset"
-          type="text"
-          >
-          <button class="todo-app__edit-btn btn-reset">Edit</button>
-          <button class="todo-app__delete-btn btn-reset">
-            <img class="todo-app__icon" src="./remove.svg">
-          </button>
-        </li>
-      </ul>
-    </div>
+        <h2 class="todo-app__title">Todo</h2>
+        <ul class="todo-app__list list-reset" id="incompleteTasks">
+          <li class="todo-app__item">
+            <input
+            class="todo-app__checkbox input-reset"
+            type="checkbox"
+            aria-label="convert a task to completed"
+            >
+            <label class="todo-app__label">Pay Bills</label>
+            <input
+            class="todo-app__task input-reset"
+            type="text"
+            aria-label="enter a task"
+            >
+            <button class="todo-app__edit-btn btn-reset" aria-label="edit task">Edit</button>
+            <button class="todo-app__delete-btn btn-reset" aria-label="remove task">
+              <img
+              class="todo-app__icon"
+              src="./remove.svg"
+              alt="icon remove"
+              >
+            </button>
+          </li>
+          <li class="todo-app__item todo-app__item--edit">
+            <input
+            class="todo-app__checkbox input-reset"
+            type="checkbox"
+            aria-label="convert a task to completed"
+            >
+            <label class="todo-app__label">Go Shopping</label>
+            <input
+            type="text"
+            value="Go Shopping"
+            class="todo-app__task input-reset"
+            aria-label="enter a task"
+            >
+            <button class="todo-app__edit-btn btn-reset" aria-label="edit task">Save</button>
+            <button class="todo-app__delete-btn btn-reset" aria-label="remove task">
+              <img
+              class="todo-app__icon"
+              src="./remove.svg"
+              alt="icon remove"
+              >
+            </button>
+          </li>
+        </ul>
+        <h2 class="todo-app__title">Completed</h2>
+        <ul class="todo-app__list todo-app__list--complete list-reset" id="completedTasks">
+          <li class="todo-app__item">
+            <input
+            class="todo-app__checkbox input-reset"
+            type="checkbox"
+            aria-label="convert a task to completed"
+            checked
+            >
+            <label class="todo-app__label">See the Doctor</label>
+            <input
+            class="todo-app__task input-reset"
+            type="text"
+            aria-label="enter a task"
+            >
+            <button class="todo-app__edit-btn btn-reset" aria-label="edit task">Edit</button>
+            <button class="todo-app__delete-btn btn-reset" aria-label="remove task">
+              <img
+              class="todo-app__icon"
+              src="./remove.svg"
+              alt="icon remove"
+              >
+            </button>
+          </li>
+        </ul>
+      </section>
+    </main>
     <script src="./app.js"></script>
   </body>
 </html>
